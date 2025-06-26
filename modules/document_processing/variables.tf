@@ -33,3 +33,9 @@ variable "db_security_group_id" {
   description = "Security group ID for the RDS instance"
   type        = string
 }
+
+variable "lambda_runtime" {
+  description = "Lambda function runtime"
+  type        = string
+  default     = "python3.9"
+}
