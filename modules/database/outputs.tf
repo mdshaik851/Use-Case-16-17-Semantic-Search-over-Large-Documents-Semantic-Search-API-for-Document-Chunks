@@ -1,20 +1,24 @@
-output "db_host" {
-  value = aws_db_instance.semantic_search_db.address
+output "endpoint" {
+  description = "Database endpoint"
+  value       = aws_db_instance.main.endpoint
 }
 
-output "db_name" {
-  value = aws_db_instance.semantic_search_db.db_name
+output "port" {
+  description = "Database port"
+  value       = aws_db_instance.main.port
 }
 
-output "db_username" {
-  value = aws_db_instance.semantic_search_db.username
+output "database_name" {
+  description = "Database name"
+  value       = aws_db_instance.main.db_name
 }
 
-output "db_password" {
-  value     = aws_db_instance.semantic_search_db.password
-  sensitive = true
+output "instance_id" {
+  description = "Database instance ID"
+  value       = aws_db_instance.main.id
 }
 
-output "db_security_group_id" {
-  value = aws_security_group.rds_sg.id
+output "arn" {
+  description = "Database ARN"
+  value       = aws_db_instance.main.arn
 }
